@@ -1287,11 +1287,11 @@ public class myJFrame extends javax.swing.JFrame implements DocumentListener {
     jButtonCtrl.setFont(new java.awt.Font("Liberation Sans", 1, 16)); // NOI18N
     jButtonCtrl.setText("Ctrl");
     jButtonCtrl.addMouseListener(new java.awt.event.MouseAdapter() {
-      public void mouseExited(java.awt.event.MouseEvent evt) {
-        jButtonCtrlMouseExited(evt);
-      }
       public void mouseEntered(java.awt.event.MouseEvent evt) {
         jButtonCtrlMouseEntered(evt);
+      }
+      public void mouseExited(java.awt.event.MouseEvent evt) {
+        jButtonCtrlMouseExited(evt);
       }
     });
     jButtonCtrl.addActionListener(new java.awt.event.ActionListener() {

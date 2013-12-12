@@ -2,6 +2,8 @@ import java.awt.AWTException;
 import java.awt.Color;
 import java.awt.Robot;
 import java.awt.Point;
+import javax.swing.UIManager;
+import javax.swing.border.*;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -168,6 +170,14 @@ public class shortcutJDialog extends javax.swing.JDialog {
 
     jButton1.setFont(new java.awt.Font("Liberation Sans", 1, 16)); // NOI18N
     jButton1.setText("jButton1");
+    jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+      public void mouseEntered(java.awt.event.MouseEvent evt) {
+        jButton1MouseEntered(evt);
+      }
+      public void mouseExited(java.awt.event.MouseEvent evt) {
+        jButton1MouseExited(evt);
+      }
+    });
     jButton1.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jButtonTopLeftActionPerformed(evt);
@@ -176,6 +186,14 @@ public class shortcutJDialog extends javax.swing.JDialog {
 
     jButton2.setFont(new java.awt.Font("Liberation Sans", 1, 16)); // NOI18N
     jButton2.setText("jButton1");
+    jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+      public void mouseEntered(java.awt.event.MouseEvent evt) {
+        jButton2MouseEntered(evt);
+      }
+      public void mouseExited(java.awt.event.MouseEvent evt) {
+        jButton2MouseExited(evt);
+      }
+    });
     jButton2.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jButtonTopActionPerformed(evt);
@@ -184,6 +202,14 @@ public class shortcutJDialog extends javax.swing.JDialog {
 
     jButton3.setFont(new java.awt.Font("Liberation Sans", 1, 16)); // NOI18N
     jButton3.setText("jButton1");
+    jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+      public void mouseEntered(java.awt.event.MouseEvent evt) {
+        jButton3MouseEntered(evt);
+      }
+      public void mouseExited(java.awt.event.MouseEvent evt) {
+        jButton3MouseExited(evt);
+      }
+    });
     jButton3.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jButtonTopRightActionPerformed(evt);
@@ -192,6 +218,14 @@ public class shortcutJDialog extends javax.swing.JDialog {
 
     jButton4.setFont(new java.awt.Font("Liberation Sans", 1, 16)); // NOI18N
     jButton4.setText("jButton1");
+    jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+      public void mouseEntered(java.awt.event.MouseEvent evt) {
+        jButton4MouseEntered(evt);
+      }
+      public void mouseExited(java.awt.event.MouseEvent evt) {
+        jButton4MouseExited(evt);
+      }
+    });
     jButton4.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jButtonRightActionPerformed(evt);
@@ -200,6 +234,14 @@ public class shortcutJDialog extends javax.swing.JDialog {
 
     jButton6.setFont(new java.awt.Font("Liberation Sans", 1, 16)); // NOI18N
     jButton6.setText("jButton1");
+    jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+      public void mouseEntered(java.awt.event.MouseEvent evt) {
+        jButton6MouseEntered(evt);
+      }
+      public void mouseExited(java.awt.event.MouseEvent evt) {
+        jButton6MouseExited(evt);
+      }
+    });
     jButton6.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jButtonMiddleActionPerformed(evt);
@@ -208,6 +250,14 @@ public class shortcutJDialog extends javax.swing.JDialog {
 
     jButton7.setFont(new java.awt.Font("Liberation Sans", 1, 16)); // NOI18N
     jButton7.setText("jButton1");
+    jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+      public void mouseEntered(java.awt.event.MouseEvent evt) {
+        jButton7MouseEntered(evt);
+      }
+      public void mouseExited(java.awt.event.MouseEvent evt) {
+        jButton7MouseExited(evt);
+      }
+    });
     jButton7.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jButtonBottomActionPerformed(evt);
@@ -216,6 +266,14 @@ public class shortcutJDialog extends javax.swing.JDialog {
 
     jButton8.setFont(new java.awt.Font("Liberation Sans", 1, 16)); // NOI18N
     jButton8.setText("jButton1");
+    jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+      public void mouseEntered(java.awt.event.MouseEvent evt) {
+        jButton8MouseEntered(evt);
+      }
+      public void mouseExited(java.awt.event.MouseEvent evt) {
+        jButton8MouseExited(evt);
+      }
+    });
     jButton8.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jButtonLeftActionPerformed(evt);
@@ -224,6 +282,14 @@ public class shortcutJDialog extends javax.swing.JDialog {
 
     jButton9.setFont(new java.awt.Font("Liberation Sans", 1, 16)); // NOI18N
     jButton9.setText("jButton1");
+    jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+      public void mouseEntered(java.awt.event.MouseEvent evt) {
+        jButton9MouseEntered(evt);
+      }
+      public void mouseExited(java.awt.event.MouseEvent evt) {
+        jButton9MouseExited(evt);
+      }
+    });
     jButton9.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jButtonBottomLeftActionPerformed(evt);
@@ -232,6 +298,14 @@ public class shortcutJDialog extends javax.swing.JDialog {
 
     jButton5.setFont(new java.awt.Font("Liberation Sans", 1, 16)); // NOI18N
     jButton5.setText("jButton1");
+    jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+      public void mouseEntered(java.awt.event.MouseEvent evt) {
+        jButton5MouseEntered(evt);
+      }
+      public void mouseExited(java.awt.event.MouseEvent evt) {
+        jButton5MouseExited(evt);
+      }
+    });
     jButton5.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jButtonBottomRightActionPerformed(evt);
@@ -273,20 +347,20 @@ public class shortcutJDialog extends javax.swing.JDialog {
       .addGroup(jLayeredPane1Layout.createSequentialGroup()
         .addGap(0, 0, Short.MAX_VALUE)
         .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addGap(4, 4, 4)
+          .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGap(5, 5, 5)
         .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addGap(4, 4, 4)
+          .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGap(5, 5, 5)
         .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
     );
     jLayeredPane1.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
     jLayeredPane1.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -476,6 +550,78 @@ public class shortcutJDialog extends javax.swing.JDialog {
         
     }//GEN-LAST:event_formMouseReleased
 
+  private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
+    jButton1.setBorder(new LineBorder(new Color(66, 139, 221), 2, true));
+  }//GEN-LAST:event_jButton1MouseEntered
+
+  private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
+    jButton1.setBorder(UIManager.getBorder("Button.border"));
+  }//GEN-LAST:event_jButton1MouseExited
+
+  private void jButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseEntered
+    jButton2.setBorder(new LineBorder(new Color(66, 139, 221), 2, true));
+  }//GEN-LAST:event_jButton2MouseEntered
+
+  private void jButton2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseExited
+    jButton2.setBorder(UIManager.getBorder("Button.border"));
+  }//GEN-LAST:event_jButton2MouseExited
+
+  private void jButton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseEntered
+    jButton3.setBorder(new LineBorder(new Color(66, 139, 221), 2, true));
+  }//GEN-LAST:event_jButton3MouseEntered
+
+  private void jButton3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseExited
+    jButton3.setBorder(UIManager.getBorder("Button.border"));
+  }//GEN-LAST:event_jButton3MouseExited
+
+  private void jButton8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseEntered
+    jButton8.setBorder(new LineBorder(new Color(66, 139, 221), 2, true));
+  }//GEN-LAST:event_jButton8MouseEntered
+
+  private void jButton8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseExited
+    jButton8.setBorder(UIManager.getBorder("Button.border"));
+  }//GEN-LAST:event_jButton8MouseExited
+
+  private void jButton6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseEntered
+    jButton6.setBorder(new LineBorder(new Color(66, 139, 221), 2, true));
+  }//GEN-LAST:event_jButton6MouseEntered
+
+  private void jButton6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseExited
+    jButton6.setBorder(UIManager.getBorder("Button.border"));
+  }//GEN-LAST:event_jButton6MouseExited
+
+  private void jButton4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseEntered
+    jButton4.setBorder(new LineBorder(new Color(66, 139, 221), 2, true));
+  }//GEN-LAST:event_jButton4MouseEntered
+
+  private void jButton4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseExited
+    jButton4.setBorder(UIManager.getBorder("Button.border"));
+  }//GEN-LAST:event_jButton4MouseExited
+
+  private void jButton9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseEntered
+    jButton9.setBorder(new LineBorder(new Color(66, 139, 221), 2, true));
+  }//GEN-LAST:event_jButton9MouseEntered
+
+  private void jButton9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseExited
+    jButton9.setBorder(UIManager.getBorder("Button.border"));
+  }//GEN-LAST:event_jButton9MouseExited
+
+  private void jButton7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseEntered
+    jButton7.setBorder(new LineBorder(new Color(66, 139, 221), 2, true));
+  }//GEN-LAST:event_jButton7MouseEntered
+
+  private void jButton7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseExited
+    jButton7.setBorder(UIManager.getBorder("Button.border"));
+  }//GEN-LAST:event_jButton7MouseExited
+
+  private void jButton5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseEntered
+    jButton5.setBorder(new LineBorder(new Color(66, 139, 221), 2, true));
+  }//GEN-LAST:event_jButton5MouseEntered
+
+  private void jButton5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseExited
+    jButton5.setBorder(UIManager.getBorder("Button.border"));
+  }//GEN-LAST:event_jButton5MouseExited
+
     public void colorOn(){
         jButton7.setBackground(Color.yellow);
     }
@@ -491,7 +637,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'a':
                 setLocationRelativeTo(buttnA);
                 p = buttnA.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "a";
                 LetterTop =         "d";
                 LetterLeft =        "r";
@@ -514,7 +660,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'b':
                 setLocationRelativeTo(buttnB);
                 p = buttnB.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "b";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -537,7 +683,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'c':
                 setLocationRelativeTo(buttnC);
                 p = buttnC.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "c";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -560,7 +706,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'd':
                 setLocationRelativeTo(buttnD);
                 p = buttnD.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "d";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -583,7 +729,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'e':
                 setLocationRelativeTo(buttnE);
                 p = buttnE.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "e";
                 LetterTop =         "d";
                 LetterLeft =        "r";
@@ -606,7 +752,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'f':
                 setLocationRelativeTo(buttnF);
                 p = buttnF.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "f";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -629,7 +775,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'g':
                 setLocationRelativeTo(buttnG);
                 p = buttnG.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "g";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -652,7 +798,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'h':
                 setLocationRelativeTo(buttnH);
                 p = buttnH.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "h";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -675,7 +821,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'i':
                 setLocationRelativeTo(buttnI);
                 p = buttnI.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "i";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -698,7 +844,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'j':
                 setLocationRelativeTo(buttnJ);
                 p = buttnJ.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "j";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -721,7 +867,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'k':
                 setLocationRelativeTo(buttnK);
                 p = buttnK.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "k";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -744,7 +890,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'l':
                 setLocationRelativeTo(buttnL);
                 p = buttnL.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "l";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -767,7 +913,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'm':
                 setLocationRelativeTo(buttnM);
                 p = buttnM.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "m";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -790,7 +936,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'n':
                 setLocationRelativeTo(buttnN);
                 p = buttnN.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "n";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -813,7 +959,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'o':
                 setLocationRelativeTo(buttnO);
                 p = buttnO.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "o";
                 LetterTop =         "m";
                 LetterLeft =        "r";
@@ -836,7 +982,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'p':
                 setLocationRelativeTo(buttnP);
                 p = buttnP.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "p";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -859,7 +1005,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'q':
                 setLocationRelativeTo(buttnQ);
                 p = buttnQ.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "q";
                 LetterTop =         "n";
                 LetterLeft =        "l";
@@ -882,7 +1028,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'r':
                 setLocationRelativeTo(buttnR);
                 p = buttnR.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "r";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -905,7 +1051,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 's':
                 setLocationRelativeTo(buttnS);
                 p = buttnS.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "s";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -928,7 +1074,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 't':
                 setLocationRelativeTo(buttnT);
                 p = buttnT.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "t";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -951,7 +1097,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'u':
                 setLocationRelativeTo(buttnU);
                 p = buttnU.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "u";
                 LetterTop =         "e";
                 LetterLeft =        "r";
@@ -974,7 +1120,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'v':
                 setLocationRelativeTo(buttnV);
                 p = buttnV.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "v";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -997,7 +1143,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'w':
                 setLocationRelativeTo(buttnW);
                 p = buttnW.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "w";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -1020,7 +1166,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'x':
                 setLocationRelativeTo(buttnX);
                 p = buttnX.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "x";
                 LetterTop =         "e";
                 LetterLeft =        "c";
@@ -1043,7 +1189,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'y':
                 setLocationRelativeTo(buttnY);
                 p = buttnY.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "y";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -1066,7 +1212,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case 'z':
                 setLocationRelativeTo(buttnZ);
                 p = buttnZ.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "z";
                 LetterTop =         "e";
                 LetterLeft =        "o";
@@ -1089,7 +1235,7 @@ public class shortcutJDialog extends javax.swing.JDialog {
             case ' ':
                 setLocationRelativeTo(buttnB);
                 p = buttnB.getLocationOnScreen();
-                bot.mouseMove(p.x+28, p.y+35);
+                bot.mouseMove(p.x+20, p.y+27);
                 LetterMiddle =      "b";
                 LetterTop =         "w";
                 LetterLeft =        "o";

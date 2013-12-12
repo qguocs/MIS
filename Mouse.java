@@ -14,8 +14,8 @@ public class Mouse {
   public static final int CTRL_DELTA_X = 75;
   public static final int CTRL_DELTA_Y = 0;
   
-  public static final int KEYB_LEFT_X = 660;
-  public static final int KEYB_RIGHT_X = 1200;
+  public static final int KEYB_LEFT_X = 655;
+  public static final int KEYB_RIGHT_X = 1195;
   public static final int KEYB_TOP_Y = 405;
   public static final int KEYB_BOTTOM_Y = 605;
   public static final int KEYB_DELTA_X = 60;
@@ -28,8 +28,8 @@ public class Mouse {
   
   /** Components */
   Robot robot;
-  MouseMov curMove;
-  MouseClk curClick;
+  MouseMov curMove, preMove;
+  MouseClk curClick, preClick;
   Panel curPanel;
   Point curPosition;
 
@@ -37,7 +37,9 @@ public class Mouse {
   Mouse() throws Exception {
     robot = new Robot();
     curMove = MouseMov.NONE;
+    preMove = MouseMov.NONE;
     curClick = MouseClk.NONE;
+    preClick = MouseClk.NONE;
     curPanel = Panel.KEYBOARD;
     robot.mouseMove(KEYB_RIGHT_X, KEYB_BOTTOM_Y);
     curPosition = MouseInfo.getPointerInfo().getLocation();

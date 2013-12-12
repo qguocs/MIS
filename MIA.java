@@ -7,12 +7,12 @@ import java.util.TimerTask;
 public class MIA {
 
   /** Thresholds */
-  public static final double TH_COG_POWER = 0.0;
-  public static final double TH_EXP_POWERL = 0.0;
-  public static final double TH_EXP_POWERU = 0.0;
-  public static final int TH_GYRO_X = 1000;
-  public static final int TH_GYRO_Y = 400;
-  public static final int TH_CTRL_DELAY = 500;    //ms
+  public static final double TH_COG_POWER = 1.0;
+  public static final double TH_EXP_POWERL = 0.9;
+  public static final double TH_EXP_POWERU = 1.0;
+  public static final int TH_GYRO_X = 800;
+  public static final int TH_GYRO_Y = 300;
+  public static final int TH_CTRL_DELAY = 1000;    //ms
   public static final boolean GYRO_EN = true;
   
   
@@ -44,6 +44,7 @@ public class MIA {
       mouse.moveLeft();
     else if (mouse.curMove == Mouse.MouseMov.RIGHT)
       mouse.moveRight();
+    mouse.preMove = mouse.curMove;
     if (!GYRO_EN)
       mouse.curMove = Mouse.MouseMov.NONE;
     
@@ -54,8 +55,9 @@ public class MIA {
       mouse.clickRight();
     else if (mouse.curClick == Mouse.MouseClk.MIDDLE)
       mouse.clickMiddle();
-    if (!GYRO_EN)
-      mouse.curClick = Mouse.MouseClk.NONE;
+
+    mouse.preClick = mouse.curClick;
+    mouse.curClick = Mouse.MouseClk.NONE;
   }
 
   
@@ -93,6 +95,8 @@ public class MIA {
           keyBoard.cogJLabel.setForeground(java.awt.Color.black);
           keyBoard.expJLabel.setText("N/A");
           keyBoard.expJLabel.setForeground(java.awt.Color.black);
+          mouse.curMove = Mouse.MouseMov.NONE;
+          mouse.curClick = Mouse.MouseClk.NONE;
           return false;
         }
 
@@ -113,7 +117,6 @@ public class MIA {
             hasCog = true;
             if (cogAct == EmoState.EE_CognitivAction_t.COG_PUSH.ToInt()) {
               keyBoard.cogJLabel.setText("Push");
-              //mouse.curClick = Mouse.MouseClk.LEFT;
             }
             
             if (cogAct == EmoState.EE_CognitivAction_t.COG_PULL.ToInt())
@@ -153,13 +156,11 @@ public class MIA {
         if (expAct == EmoState.EE_ExpressivAlgo_t.EXP_SMIRK_LEFT.ToInt() && expPowerL > TH_EXP_POWERL) {
           hasExp = true;
           keyBoard.expJLabel.setText("Smirk Left");
-          //mouse.curMove = Mouse.MouseMov.DOWN;
         }
         
         if (expAct == EmoState.EE_ExpressivAlgo_t.EXP_SMIRK_RIGHT.ToInt() && expPowerL > TH_EXP_POWERL) {
           hasExp = true;
           keyBoard.expJLabel.setText("Smirk Right");
-          //mouse.curMove = Mouse.MouseMov.RIGHT;
         }
         
         if (expAct == EmoState.EE_ExpressivAlgo_t.EXP_LAUGH.ToInt() && expPowerL > TH_EXP_POWERL)
@@ -201,7 +202,8 @@ public class MIA {
         if (EmoState.INSTANCE.ES_ExpressivIsRightWink(eState) == 1) {
           hasExp = true;
           keyBoard.expJLabel.setText("Wink Right");
-          //mouse.curClick = Mouse.MouseClk.LEFT;
+          if (mouse.preClick == Mouse.MouseClk.NONE)
+            mouse.curClick = Mouse.MouseClk.LEFT;
         }
         
         if (EmoState.INSTANCE.ES_ExpressivIsLookingLeft(eState) == 1) {
@@ -221,42 +223,40 @@ public class MIA {
           keyBoard.expJLabel.setForeground(java.awt.Color.black);
         }
         
-        if (!hasCog && !hasExp)
-          mouse.curClick = Mouse.MouseClk.NONE;
 
         /** Gyro */
         if (GYRO_EN) {
           Edk.INSTANCE.EE_HeadsetGetGyroDelta(userID.getValue(), gyroX, gyroY);
-          System.out.println("gyroX = " + gyroX.getValue() + " gyroY = " + gyroY.getValue());
+          //System.out.println("gyroX = " + gyroX.getValue() + " gyroY = " + gyroY.getValue());
           if ((absInt(gyroX.getValue()) > absInt(gyroY.getValue())) && (absInt(gyroX.getValue()) > TH_GYRO_X)) {
             //move right
             if (gyroX.getValue() > 0) {
-              if (mouse.curMove == Mouse.MouseMov.NONE)
+              if (mouse.preMove == Mouse.MouseMov.NONE)
                 mouse.curMove = Mouse.MouseMov.RIGHT;
-              else if (mouse.curMove == Mouse.MouseMov.LEFT)
+              else if (mouse.preMove == Mouse.MouseMov.LEFT)
                 mouse.curMove = Mouse.MouseMov.NONE;
             }
             //move left
             else {
-              if (mouse.curMove == Mouse.MouseMov.NONE)
+              if (mouse.preMove == Mouse.MouseMov.NONE)
                 mouse.curMove = Mouse.MouseMov.LEFT;
-              else if (mouse.curMove == Mouse.MouseMov.RIGHT)
+              else if (mouse.preMove == Mouse.MouseMov.RIGHT)
                 mouse.curMove = Mouse.MouseMov.NONE;
             }
           }
           else if ((absInt(gyroY.getValue()) > absInt(gyroX.getValue())) && (absInt(gyroY.getValue()) > TH_GYRO_Y)) {
             //move down
-            if (gyroY.getValue() > 0) {
-              if (mouse.curMove == Mouse.MouseMov.NONE)
+            if (gyroY.getValue() < 0) {
+              if (mouse.preMove == Mouse.MouseMov.NONE)
                 mouse.curMove = Mouse.MouseMov.DOWN;
-              else if (mouse.curMove == Mouse.MouseMov.UP)
+              else if (mouse.preMove == Mouse.MouseMov.UP)
                 mouse.curMove = Mouse.MouseMov.NONE;
             }
             //move up
             else {
-              if (mouse.curMove == Mouse.MouseMov.NONE)
+              if (mouse.preMove == Mouse.MouseMov.NONE)
                 mouse.curMove = Mouse.MouseMov.UP;
-              else if (mouse.curMove == Mouse.MouseMov.DOWN)
+              else if (mouse.preMove == Mouse.MouseMov.DOWN)
                 mouse.curMove = Mouse.MouseMov.NONE;
             }
           }
